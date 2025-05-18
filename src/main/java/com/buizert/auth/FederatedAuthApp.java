@@ -14,6 +14,7 @@ import com.buizert.auth.helpers.TokenLogger;
  * mvn clean verify
  * 
  * Run application:
+ * mvn spring-boot:run
  * 
  * @author Leen Buizert
  *
