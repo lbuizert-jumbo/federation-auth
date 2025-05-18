@@ -24,7 +24,7 @@ public class TokenLogger {
 			jwt = SignedJWT.parse(token);
 			JWTClaimsSet claims = jwt.getJWTClaimsSet();
 			log.info("token content : " + jwt.getPayload().toString());
-			log.info("issuser       : " + claims.getIssuer());
+			log.info("issuer        : " + claims.getIssuer());
 			log.info("subject       : " + claims.getSubject());
 			log.info("audience      : " + claims.getAudience());
 			log.info("roles         : " + claims.getClaim("roles"));
