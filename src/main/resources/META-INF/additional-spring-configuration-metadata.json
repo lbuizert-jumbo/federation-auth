@@ -1,0 +1,47 @@
+{"properties": [
+  {
+    "name": "config.auth.local-url",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.local-url'"
+  },
+  {
+    "name": "config.auth.local-client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.local-clientId'"
+  },
+  {
+    "name": "config.auth.federated-scope",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.federated-scope'"
+  },
+  {
+    "name": "config.auth.federated-client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.federated-clientId'"
+  },
+  {
+    "name": "config.auth.federated-url",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.federated-url'"
+  },
+  {
+    "name": "config.auth.local-scope",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.local-scope'"
+  },
+  {
+    "name": "config.auth.local-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.local-secret'"
+  },
+  {
+    "name": "config.auth.local-cert-endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.local-cert-endpoint'"
+  },
+  {
+    "name": "config.auth.federated-cert-endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'config.auth.federated-cert-endpoint'"
+  }
+]}
