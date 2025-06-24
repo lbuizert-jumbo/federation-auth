@@ -17,7 +17,7 @@ public class TokenLogger {
 		
         if (Objects.nonNull(token)) {
         	log.info(token.substring(0, 10) + "...");
-        	log.debug(token);
+        	log.info(token);
         }
 		SignedJWT jwt;
 		try {
