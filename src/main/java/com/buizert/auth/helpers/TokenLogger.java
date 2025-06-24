@@ -22,7 +22,8 @@ public class TokenLogger {
 		SignedJWT jwt;
 		try {
 			
-			jwt = SignedJWT.parse(token);
+			if (Objects.nonNull(token)) {
+		    jwt = SignedJWT.parse(token);
 			JWTClaimsSet claims = jwt.getJWTClaimsSet();
 			log.info("token content : " + jwt.getPayload().toString());
 			log.info("issuer        : " + claims.getIssuer());
@@ -30,7 +31,10 @@ public class TokenLogger {
 			log.info("audience      : " + claims.getAudience());
 			log.info("roles         : " + claims.getClaim("roles"));
 			log.info("scopes        : " + claims.getStringListClaim("scp"));
-			
+			} else {
+			    
+			    log.info("No token provided for analysis");
+			}
 		
 		} catch (ParseException e) {
 			
