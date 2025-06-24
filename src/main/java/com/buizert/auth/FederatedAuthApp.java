@@ -29,6 +29,9 @@ public class FederatedAuthApp implements CommandLineRunner {
 	@Autowired
 	private FederatedTokenManager federatedTokenManager;
 	
+	@Autowired
+	private JumboTokenManager jumboTokenManager;
+	
 	private static Logger log = LoggerFactory.getLogger(FederatedAuthApp.class);
 	
 	public static void main(String[] args) {
@@ -38,10 +41,16 @@ public class FederatedAuthApp implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+	    // federated token flow
 		final String localToken = tokenManager.getFederationToken();
 		TokenLogger.log(localToken);
 		log.info("Use this token to request token from external IDP");
 		final String federatedToken = federatedTokenManager.getBearerToken(localToken);
 		TokenLogger.log(federatedToken);
+		
+		// get okta token
+		final String jumboToken = jumboTokenManager.getFederationToken();
+		TokenLogger.log(jumboToken);
+		
 	}
 }

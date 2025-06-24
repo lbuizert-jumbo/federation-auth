@@ -17,6 +17,7 @@ public class TokenLogger {
 		
         if (Objects.nonNull(token)) {
         	log.info(token.substring(0, 10) + "...");
+        	log.debug(token);
         }
 		SignedJWT jwt;
 		try {
@@ -28,6 +29,7 @@ public class TokenLogger {
 			log.info("subject       : " + claims.getSubject());
 			log.info("audience      : " + claims.getAudience());
 			log.info("roles         : " + claims.getClaim("roles"));
+			log.info("scopes        : " + claims.getStringListClaim("scp"));
 			
 		
 		} catch (ParseException e) {

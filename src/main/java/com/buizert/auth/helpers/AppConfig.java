@@ -17,6 +17,10 @@ public class AppConfig {
 	private String localClientId;
 	private String localSecret;
 	private String localScope;
+	private String jumboUrl;
+	private String jumboClientId;
+	private String jumboSecret;
+	private String jumboScope;
 	private String federatedUrl;
 	private String federatedClientId;
 	private String federatedScope;
@@ -63,4 +67,28 @@ public class AppConfig {
 	public void setLocalUrl(String localUrl) {
 		this.localUrl = localUrl;
 	}
+    public String getJumboUrl() {
+        return jumboUrl;
+    }
+    public void setJumboUrl(String jumboUrl) {
+        this.jumboUrl = jumboUrl;
+    }
+    public String getJumboClientId() {
+        return jumboClientId;
+    }
+    public void setJumboClientId(String jumboClientId) {
+        this.jumboClientId = jumboClientId;
+    }
+    public String getJumboSecret() {
+        return jumboSecret;
+    }
+    public void setJumboSecret(String jumboSecret) {
+        this.jumboSecret = jumboSecret;
+    }
+    public String getJumboScope() {
+        return jumboScope;
+    }
+    public void setJumboScope(String jumboScope) {
+        this.jumboScope = jumboScope;
+    }
 }
